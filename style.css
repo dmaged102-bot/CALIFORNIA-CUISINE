@@ -463,3 +463,66 @@ body, html {
         display: block !important;
     }
 }
+/* ==========================================================================
+   أقوى كود تنظيف وتوسيع مساحات للموبايل (Anti-Clutter)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. إعطاء مساحة أمان لكل الأقسام ومنع الزحمة */
+    section, .container, .hero, .main-content {
+        padding: 30px 15px !important; /* تقليل الهوامش الداخلية عشان الكلام يتنفس */
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. فك زحمة الناف بار الفوقاني تماماً */
+    .navbar_shadow-glass, nav, header {
+        flex-direction: column !important;
+        padding: 10px !important;
+        gap: 8px !important;
+    }
+
+    nav ul, .nav-links {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 10px !important; /* تقريب اللينكات شوية عشان متطلعش برة */
+        padding: 0 !important;
+    }
+
+    nav a, .nav-links a {
+        font-size: 0.75rem !important; /* تصغير الخط الفوقاني عشان الزحمة */
+        padding: 5px 8px !important;
+    }
+
+    /* 3. فك زحمة كروت الأكل (Burgers) */
+    .menu-items, .grid-layout, .row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important; /* مسافة واضحة بين كل كارت والتاني */
+        padding: 5px !important;
+    }
+
+    .card, .menu-item {
+        width: 100% !important;
+        max-width: 330px !important; /* حجم كارت ناعم ومناسب لكل الموبايلات */
+        padding: 15px !important; /* مساحة داخلية رايقة */
+        margin-bottom: 10px !important;
+    }
+
+    /* تصغير الوصف المكتوب تحت الأكل عشان مياخدش مساحة ضخمة */
+    .card p, .menu-item p, .description {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-top: 5px !important;
+    }
+
+    /* 4. إجبار الصور واللوجو على الالتزام بالمساحة الصغير */
+    .logo-image {
+        max-width: 110px !important; /* تصغير اللوجو على الموبايل عشان ميزحمش الدنيا */
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
