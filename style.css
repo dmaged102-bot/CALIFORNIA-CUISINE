@@ -170,57 +170,109 @@ body {
 }
 
 /* === الـ Footer الفخم جداً المخصص لك بالكامل باللغة الإنجليزية وبطريقة تفتح العين === */
+/* === الـ Footer الفخم جداً النحيف للغاية والميكروسكوبي للموبايل === */
 .luxury-footer {
-    background: rgba(5, 5, 6, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid var(--border);
-    padding: 40px 6%;
-    text-align: center;
-}
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-.dev-credits {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-.designer-name {
-    font-weight: 700;
-    background: var(--gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.whatsapp-btn-luxury {
-    background: #25D366;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    padding: 12px 28px;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.whatsapp-btn-luxury:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.45);
-    background: #20ba5a;
+    background: rgba(5, 5, 6, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-top: 1px solid var(--border) !important;
+    padding: 10px 6% !important; /* تقليص الحشو الإجمالي */
+    text-align: center !important;
 }
 
-@media(max-width: 950px) {
-    .location-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 3.5rem; }
-    .nav-links { display: none; }
+.footer-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+.dev-credits {
+    font-size: 0.6rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+}
+
+.designer-name {
+    font-weight: 700 !important;
+    font-size: 0.65rem !important;
+    background: var(--gold) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.whatsapp-btn-luxury {
+    background: #25D366 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 0.55rem !important;
+    letter-spacing: 0.5px !important;
+    padding: 3px 8px !important; /* حجم صغير جداً */
+    border-radius: 50px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+    box-shadow: 0 3px 8px rgba(37, 211, 102, 0.1) !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* === الحل الجذري والنهائي لشاشات الموبايل (أقل من 768px) === */
+/* === الـ Footer الجديد: سطر واحد ميكروسكوبي فخم === */
+.luxury-footer {
+    background: rgba(5, 5, 6, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-top: 1px solid var(--border) !important;
+    padding: 8px 4% !important; /* حشو صغير جداً لجعل الشريط نحيفاً للغاية */
+    text-align: center !important;
+}
+
+.footer-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.dev-credits {
+    font-size: 0.55rem !important; /* حجم خط صغير جداً وناعم ومريح للعين */
+    color: rgba(255, 255, 255, 0.4) !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+}
+
+/* تحويل اسمك إلى رابط تفاعلي فخم للواتساب */
+.designer-link {
+    font-weight: 700 !important;
+    background: var(--gold) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-decoration: none !important; /* إخفاء الخط السفلي الافتراضي للروابط */
+    display: inline-block !important;
+    transition: opacity 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+/* تأثير خفيف جداً عند تمرير الماوس أو الضغط */
+.designer-link:hover {
+    opacity: 0.8 !important;
+}
+
+/* === توافق تام مع الموبايل === */
+@media (max-width: 768px) {
+    .luxury-footer {
+        padding: 6px 4% !important; /* شريط شبه غير مرئي أسفل الشاشة على الهاتف */
+    }
+    
+    .dev-credits {
+        font-size: 0.5rem !important; /* حجم متناهي الصغر يناسب الهواتف تماماً */
+        letter-spacing: 0.5px !important;
+    }
 }
