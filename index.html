@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* تنسيقات فخمة لتصغير عناصر الـ Footer بدقة */
+        .dev-credits {
+            font-size: 13px !important;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        .designer-name {
+            font-size: 14px !important;
+            font-weight: 600;
+            color: #c5a880; /* اللون الذهبي الفخم */
+        }
+        .whatsapp-btn-luxury {
+            padding: 8px 16px !important; /* تصغير حجم الزر */
+            font-size: 12px !important; /* تصغير الخط */
+            border-radius: 20px !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .whatsapp-btn-luxury i {
+            font-size: 14px !important; /* تصغير الأيقونة */
+        }
+    </style>
 </head>
 <body>
 
@@ -328,7 +352,6 @@
             </div>
 
             <!-- ==================== DRINKS & SIPS ==================== -->
-            <!-- Iced Drinks -->
             <div class="menu-card glass" data-category="drinks" style="display: none;">
                 <div class="card-info">
                     <div class="card-header"><h3>California Cocktail</h3><span class="price">90.00 EGP</span></div>
@@ -433,8 +456,6 @@
                     <a href="#contact" class="order-now-btn nav-scroll-link">ORDER NOW</a>
                 </div>
             </div>
-
-            <!-- Matcha -->
             <div class="menu-card glass" data-category="drinks" style="display: none;">
                 <div class="card-info">
                     <div class="card-header"><h3>Iced Matcha</h3><span class="price">135.00 EGP</span></div>
@@ -451,8 +472,6 @@
                     <a href="#contact" class="order-now-btn nav-scroll-link">ORDER NOW</a>
                 </div>
             </div>
-
-            <!-- Milk Shakes -->
             <div class="menu-card glass" data-category="drinks" style="display: none;">
                 <div class="card-info">
                     <div class="card-header"><h3>Vanilla Shake</h3><span class="price">110.00 EGP</span></div>
@@ -501,8 +520,6 @@
                     <a href="#contact" class="order-now-btn nav-scroll-link">ORDER NOW</a>
                 </div>
             </div>
-
-            <!-- Fresh Juice -->
             <div class="menu-card glass" data-category="drinks" style="display: none;">
                 <div class="card-info">
                     <div class="card-header"><h3>Watermelon Juice</h3><span class="price">85.00 EGP</span></div>
@@ -575,8 +592,6 @@
                     <a href="#contact" class="order-now-btn nav-scroll-link">ORDER NOW</a>
                 </div>
             </div>
-
-            <!-- Smoothies -->
             <div class="menu-card glass" data-category="drinks" style="display: none;">
                 <div class="card-info">
                     <div class="card-header"><h3>Watermelon Smoothie</h3><span class="price">130.00 EGP</span></div>
@@ -649,8 +664,6 @@
                     <a href="#contact" class="order-now-btn nav-scroll-link">ORDER NOW</a>
                 </div>
             </div>
-
-            <!-- Boba & Bubbles -->
             <div class="menu-card glass" data-category="drinks" style="display: none;">
                 <div class="card-info">
                     <div class="card-header"><h3>Pink Boba</h3><span class="price">125.00 EGP</span></div>
@@ -687,26 +700,37 @@
         </div>
     </section>
 
+    <!-- ==================== LOCATION (UPDATED ACCURATE MAP) ==================== -->
     <section id="contact" class="location section-target">
         <div class="location-grid shadow-glass">
             <div class="location-info" data-aos="fade-right">
                 <span class="gold-text uppercase tracking">Order Directly via Hotline</span>
                 <h3>Location & Ordering Desk</h3>
-                <p><i class="fa-solid fa-map-pin gold-text"></i> Al-Hawamidiyya, Cairo Governorate, Egypt</p>
-                <p><i class="fa-solid fa-clock gold-text"></i> Everyday: 12:00 PM - 02:00 AM</p>
-                <p><i class="fa-solid fa-phone gold-text"></i> <span class="gold-text font-mono">+20 123 456 7890</span></p>
+                <p><i class="fa-solid fa-map-pin gold-text"></i> California Cuisine, حدائق حلوان – 9 شارع توتنجي</p>
+                <p><i class="fa-solid fa-clock gold-text"></i> Everyday: 3:00 PM - 03:00 AM</p>
+                <p><i class="fa-solid fa-phone gold-text"></i> <span class="gold-text font-mono">+20 1055022677</span></p>
             </div>
             <div class="map-container" data-aos="fade-left">
-                <iframe src="https://www.google.com/maps/embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+                <!-- تم تحديث الإحداثيات بناءً على الرابط الجديد بدقة بالغة لضمان ثبات التحميل وظهورها كإطار كامل -->
+        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.92691166473!2d31.297559067606915!3d29.895206528654594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145837004c931a7f%3A0xa0da0c22011647b3!2sCalifornia%20Cuisine!5e0!3m2!1sen!2sus!4v1782914634359!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
-    </section>
+    </div>
+</section>
 
-    <a href="tel:+201234567890" class="floating-call-btn">
+    <a href="tel:+201055022677" class="floating-call-btn">
         <i class="fa-solid fa-phone"></i>
         <span>Call Now</span>
     </a>
 
+    <!-- ==================== FOOTER ==================== -->
     <footer class="luxury-footer">
         <div class="footer-content">
             <p class="dev-credits">Made with passion by <span class="designer-name">Daniel Maged</span></p>
