@@ -261,87 +261,205 @@ body {
     opacity: 0.8 !important;
 }
 
-/* === توافق تام مع الموبايل === */
-@media (max-width: 768px) {
-    .luxury-footer {
-        padding: 6px 4% !important; 
-    }
-    
-    .dev-credits {
-        font-size: 0.5rem !important; 
-        letter-spacing: 0.5px !important;
-    }
-}/* ==========================================================================
-   1. شاشات التابلت والأجهزة المتوسطة (أصغر من 1024px)
-   ========================================================================== */
-@media (max-width: 1024px) {
-    /* تصغير العناوين الضخمة نسبياً لتناسب التابلت */
-    h1 {
-        font-size: 3rem !important;
-    }
-    
-    /* تظبيط الهوامش الجانبية للمحتوى */
-    .container, section {
-        padding: 40px 20px !important;
-    }
-}
-
 /* ==========================================================================
-   2. شاشات الموبايل الكبيرة والعمودية (أصغر من 768px)
+   أقوى كود تجاوب (Responsiveness) ودقة شاشات لعام 2026
    ========================================================================== */
 @media (max-width: 768px) {
-    /* تحويل الـ Navbar من أفقي لعمودي لمنع تداخل اللينكات */
-    header, nav, .navbar {
-        flex-direction: column !important;
-        gap: 15px !important;
-        text-align: center !important;
+    /* تظبيط الناف بار كطبقة ثابتة فوق التصميم بتأثير الزجاج المضبب */
+    .navbar_shadow-glass {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 15px 20px !important;
+        position: fixed !important;
+        width: 100% !important;
+        top: 0;
+        left: 0;
+        z-index: 9999 !important;
+        box-sizing: border-box;
     }
 
-    /* إلغاء الـ Float أو الـ Grid العريض وتحويله لعمود واحد */
-    .row, .grid-layout, .menu-items {
+    /* تصميم زرار المنيو (الثلاث شرط) */
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        height: 3px;
+        width: 100%;
+        background-color: #c5a880; /* اللون الذهبي الملكي بتاعك */
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* تحويل قائمة اللينكات لمنيو منبثقة بتأثير الـ Ultra Luxury Glassmorphism */
+    .nav-links {
         display: flex !important;
         flex-direction: column !important;
+        position: fixed !important;
+        top: -100vh; /* مخفية في الأعلى */
+        left: 0;
+        width: 100% !important;
+        height: 45vh !important;
+        background: rgba(10, 10, 10, 0.96) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        justify-content: center !important;
         align-items: center !important;
+        gap: 25px !important;
+        transition: top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; /* أنيميشن فيزيائي ناعم */
+        z-index: 9998 !important;
+        padding: 0 !important;
+        border-bottom: 1px solid rgba(197, 168, 128, 0.15);
     }
 
-    /* تصغير النص الكبير جداً في الـ Hero Section ليناسب عرض الموبايل */
+    /* تشغيل المنيو عند الضغط */
+    .nav-links.active {
+        top: 65px !important;
+    }
+
+    /* تظبيط أحجام النصوص لعدم تدمير التصميم البصري */
     h1 {
-        font-size: 2.2rem !important;
+        font-size: 2rem !important;
+        text-align: center !important;
         line-height: 1.3 !important;
     }
     
-    h2 {
-        font-size: 1.8rem !important;
+    h2, .section-title {
+        font-size: 1.6rem !important;
+        text-align: center !important;
     }
 
-    /* منع أي عنصر من إنه يخرج برة حدود الشاشة (حل مشكلة السكرول الجانبي البايخ) */
+    /* إعادة ترتيب الكروت والشبكات لتصبح عمودية انسيابية */
+    .menu-items, .grid-layout, .row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
+
+    /* تظبيط كروت البرجر الفاخرة */
+    .card, .menu-item {
+        width: 95% !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+    }
+
+    /* حماية مطلقة ضد السكرول الجانبي المزعج */
     body, html {
         overflow-x: hidden !important;
-    }
-
-    /* تظبيط الأزرار عشان تكون عريضة وسهلة الضغط باللمس */
-    .btn, button, .cta-button {
         width: 100% !important;
-        max-width: 300px !important;
-        margin: 10px auto !important;
     }
 }
 
-/* ==========================================================================
-   3. شاشات الموبايل الصغيرة جداً (أصغر من 480px)
+/* إخفاء زرار المنيو التلقائي على أجهزة الكمبيوتر الكبيرة */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+}/* ==========================================================================
+   أقوى كود لتنظيم الشاشات ومنع تداخل العناصر (Ultra Responsiveness)
    ========================================================================== */
-@media (max-width: 480px) {
+
+/* 1. القواعد العامة لحماية الشاشة من التداخل والسكرول الجانبي المزعج */
+* {
+    box-sizing: border-box; /* بيضمن إن الـ Padding المحسب ميبوظش المقاسات */
+}
+
+body, html {
+    overflow-x: hidden !important; /* حظر أي خروج للعناصر برة عرض الموبايل */
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased; /* لزيادة دقة ونعومة الخطوط على الموبايل */
+}
+
+/* 2. التحكم في الشاشات الصغيرة (الهواتف الذكية) أصغر من 768px */
+@media (max-width: 768px) {
+    
+    /* منع تداخل الـ Navbar الفوقاني وتحويله لترتيب مرن */
+    .navbar_shadow-glass, nav, header {
+        display: flex !important;
+        flex-direction: column !important; /* العناصر بتترتب تحت بعض بنظام */
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 15px 10px !important;
+        height: auto !important;
+        gap: 12px !important; /* مسافة ثابتة تمنع تداخل اللوجو والروابط */
+    }
+
+    /* تظبيط اللينكات (HOME - MENU) عشان تفرش بشكل شيك وبدون زحمة */
+    nav ul, .nav-links {
+        display: flex !important;
+        flex-direction: row !important; /* مفرودين بالعرض */
+        flex-wrap: wrap !important; /* لو الشاشة ضيقة جداً ينزلوا سطر جديد تلقائي بدون تداخل */
+        justify-content: center !important;
+        gap: 15px !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    nav a, .nav-links a {
+        font-size: 0.85rem !important; /* حجم خط مثالي للموبايل */
+        letter-spacing: 1px;
+    }
+
+    /* حماية النصوص والعناوين الضخمة (Hero Section) من الخروج برة الشاشة */
     h1 {
-        font-size: 1.8rem !important;
+        font-size: 2rem !important; /* تصغير ذكي للعنوان الكبير ليناسب الموبايل */
+        line-height: 1.3 !important;
+        text-align: center !important;
+        word-wrap: break-word !important; /* لو في كلمة طويلة تتقسم ومتطلعش برة */
     }
 
-    /* تصغير حجم الخطوط الفرعية والفقرات عشان الكلام ميتزحمش */
-    p, span, .sub-headline {
+    h2, .section-title {
+        font-size: 1.6rem !important;
+        text-align: center !important;
+    }
+
+    /* أقوى كود لتنظيم كروت المنيو (Burgers) ومنعها من التداخل */
+    .menu-items, .grid-layout, .row {
+        display: flex !important;
+        flex-direction: column !important; /* تحويل الشبكة لعمود واحد منسق */
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 25px !important; /* مسافة أمان ثابتة بين كل كارت والتاني */
+        width: 100% !important;
+        padding: 15px !important;
+    }
+
+    /* تظبيط كروت الأكل الشفافة (Glassmorphic Cards) */
+    .card, .menu-item {
+        width: 100% !important;
+        max-width: 350px !important; /* العرض المثالي اللي يخليها شبه شاشة اللاب توب بس مصغرة */
+        margin: 0 auto !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* تظبيط الصور جوة الكروت عشان متطلعش برة الإطار */
+    .card img, .menu-item img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important; /* الحفاظ على أبعاد الصورة بدون مط أو تشويه */
+        border-radius: 8px;
+    }
+
+    /* تظبيط الأزرار (CTA) عشان تكون مريحة للضغط باللمس وبحجم متناسق */
+    .btn, button, .cta-button {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 12px 20px !important;
         font-size: 0.95rem !important;
-    }
-
-    /* تظبيط حجم اللوجو على الشاشات الصغيرة جداً */
-    .logo, header img {
-        max-width: 140px !important;
+        margin: 10px auto !important;
+        display: block !important;
     }
 }
