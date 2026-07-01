@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+:root {
+    --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    --gold-solid: #dfba6b;
+    --bg-dark: #050506;
+    --card-bg: rgba(255, 255, 255, 0.015);
+    --border: rgba(255, 255, 255, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* مؤشر التحميل الذكي العلوي فائق الأناقة عند ثقل الشبكة */
+.network-loader {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 3px;
+    z-index: 99999; background: rgba(255, 255, 255, 0.01);
+    opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+}
+.network-loader.active { opacity: 1; }
+.network-progress { width: 0%; height: 100%; background: var(--gold); box-shadow: 0 0 12px var(--gold-solid); transition: width 0.4s cubic-bezier(0.1, 0.8, 0.3, 1); }
+
+/* أنميشن الوميض الهادئ الفخم للقسم المستهدف بعد انتهاء الحركة */
+.section-target { transition: filter 0.8s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.8s ease; }
+.section-target.highlight-luxury { animation: luxuryGlowPulse 1.4s cubic-bezier(0.25, 1, 0.5, 1); }
+@keyframes luxuryGlowPulse {
+    0% { filter: brightness(1); }
+    30% { filter: brightness(1.25); background-color: rgba(191, 149, 63, 0.02); }
+    100% { filter: brightness(1); background-color: transparent; }
+}
+
+/* تعديل اللوجو الـ 3D: عايم وطاير بهدوء وسلاسة تامة بدون دوران كامل مزعج وبطريقة تفتح العين */
+.space-3d-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    perspective: 1500px;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.16;
+}
+.floating-logo-container {
+    transform-style: preserve-3d;
+    animation: luxuryFloatCinematic 10s ease-in-out infinite alternate;
+    text-align: center;
+    filter: blur(4px);
+}
+.layer-california {
+    font-family: 'Playfair Display', serif;
+    font-size: 12vw;
+    font-weight: 700;
+    letter-spacing: 15px;
+    background: var(--gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+.layer-cuisine {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 13vw;
+    background: linear-gradient(135deg, #fcf6ba, #bf953f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -4vw;
+    transform: translateZ(60px);
+}
+
+/* أنميشن الطيران والعمق الفخم والتأرجح الهادئ جداً */
+@keyframes luxuryFloatCinematic {
+    0% {
+        transform: translateY(-20px) rotateX(4deg) rotateY(-4deg) translateZ(0px);
+    }
+    100% {
+        transform: translateY(20px) rotateX(-4deg) rotateY(4deg) translateZ(40px);
+    }
+}
+
+/* شاشة التحميل الكلية للموقع */
+#loader {
+    position: fixed; inset: 0; background: #000; z-index: 9999;
+    display: flex; justify-content: center; align-items: center; text-align: center;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+.loader-logo { font-family: 'Playfair Display', serif; font-size: 4.5rem; letter-spacing: 12px; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; }
+.loader-sub { font-size: 0.8rem; letter-spacing: 8px; color: rgba(255,255,255,0.3); margin-top: 5px; margin-bottom: 30px; }
+.progress-bar { width: 240px; height: 2px; background: rgba(255,255,255,0.03); border-radius: 2px; overflow: hidden; margin: 0 auto; }
+.progress { width: 100%; height: 100%; background: var(--gold); animation: load 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+@keyframes load { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+
+/* الهيدر بار الزجاجي */
+.navbar {
+    position: fixed; top: 0; left: 0; width: 100%; padding: 22px 6%;
+    display: flex; justify-content: space-between; align-items: center; z-index: 100;
+    background: rgba(5, 5, 6, 0.35); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border-bottom: 1px solid var(--border);
+}
+.nav-logo-brand { display: flex; flex-direction: column; line-height: 1; }
+.nav-california { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 4px; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.nav-cuisine { font-family: 'Pinyon Script', cursive; font-size: 1.6rem; color: #fcf6ba; margin-top: -5px; padding-left: 15px; }
+
+.nav-links { display: flex; list-style: none; gap: 40px; }
+.nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 1px; background: var(--gold-solid); transition: width 0.3s ease; }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover { color: #fff; }
+
+.nav-cta-btn { border: 1px solid var(--gold-solid); padding: 10px 22px; border-radius: 50px; font-size: 0.75rem; color: #fff; text-decoration: none; letter-spacing: 1px; transition: 0.3s; }
+.nav-cta-btn:hover { background: var(--gold); color: #000; }
+
+/* الأقسام والكروت */
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; }
+.badge { background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 8px 18px; border-radius: 50px; font-size: 0.65rem; letter-spacing: 3px; color: var(--gold-solid); display: inline-flex; align-items: center; gap: 8px; margin-bottom: 25px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 5.5rem; line-height: 1.1; margin-bottom: 25px; }
+.gold-text { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { color: rgba(255,255,255,0.5); max-width: 620px; margin: 0 auto 45px; font-size: 1.1rem; line-height: 1.7; }
+.btn-gold { padding: 18px 40px; background: var(--gold); color: #000; text-decoration: none; font-weight: 600; border-radius: 50px; letter-spacing: 2px; font-size: 0.8rem; display: inline-block; transition: 0.4s; box-shadow: 0 10px 30px rgba(186, 149, 63, 0.15); }
+.btn-gold:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(186, 149, 63, 0.35); }
+
+.menu-section { padding: 140px 6%; }
+.section-header { text-align: center; margin-bottom: 70px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 15px; }
+.title-divider { width: 100px; height: 1px; background: var(--gold); margin: 0 auto; }
+
+.tabs-container { display: flex; justify-content: center; gap: 12px; margin-bottom: 60px; flex-wrap: wrap; }
+.tab-btn { background: rgba(255,255,255,0.01); border: 1px solid var(--border); color: rgba(255,255,255,0.4); padding: 14px 30px; border-radius: 14px; cursor: pointer; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.tab-btn.active, .tab-btn:hover { border-color: #bf953f; background: rgba(191, 149, 63, 0.08); color: #fff; }
+
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 35px; max-width: 1240px; margin: 0 auto; }
+.glass { background: var(--card-bg); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid var(--border); border-radius: 28px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s; }
+.card-img { width: 100%; height: 230px; overflow: hidden; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.glass:hover .card-img img { transform: scale(1.06); }
+
+.card-info { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+.card-header h3 { font-size: 1.25rem; font-weight: 600; }
+.price { font-weight: 700; color: var(--gold-solid); font-size: 1.15rem; }
+.desc-en { font-size: 0.8rem; color: rgba(255,255,255,0.35); line-height: 1.6; margin-bottom: 8px; }
+.desc-ar { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 22px; }
+
+.order-now-btn { width: 100%; padding: 15px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); color: #fff; border-radius: 16px; font-size: 0.8rem; letter-spacing: 2px; font-weight: 700; text-align: center; text-decoration: none; display: block; transition: all 0.3s; }
+.glass:hover .order-now-btn { border-color: #bf953f; background: var(--gold); color: #000; box-shadow: 0 10px 20px rgba(186,149,63,0.25); }
+
+.location { padding: 120px 6%; }
+.location-grid { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; background: var(--card-bg); border: 1px solid var(--border); border-radius: 35px; overflow: hidden; backdrop-filter: blur(30px); }
+.location-info { padding: 65px; display: flex; flex-direction: column; justify-content: center; }
+.location-info h3 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-top: 10px; margin-bottom: 35px; }
+.location-info p { margin-bottom: 22px; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 15px; }
+.map-container { width: 100%; height: 480px; filter: grayscale(1) invert(0.92) opacity(0.4); transition: 0.6s; }
+.map-container:hover { filter: grayscale(0) invert(0) opacity(1); }
+
+.floating-call-btn { position: fixed; bottom: 30px; right: 30px; background: var(--gold); color: #000; text-decoration: none; padding: 15px 25px; border-radius: 50px; display: flex; align-items: center; gap: 10px; font-weight: 700; z-index: 999; box-shadow: 0 10px 30px rgba(186, 149, 63, 0.4); animation: pulseButton 2s infinite; }
+
+@keyframes pulseButton {
+    0% { box-shadow: 0 0 0 0 rgba(191, 149, 63, 0.6); }
+    70% { box-shadow: 0 0 0 20px rgba(191, 149, 63, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(191, 149, 63, 0); }
+}
+
+/* === الـ Footer الفخم جداً المخصص لك بالكامل باللغة الإنجليزية وبطريقة تفتح العين === */
+.luxury-footer {
+    background: rgba(5, 5, 6, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border);
+    padding: 40px 6%;
+    text-align: center;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.dev-credits {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.designer-name {
+    font-weight: 700;
+    background: var(--gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.whatsapp-btn-luxury {
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.whatsapp-btn-luxury:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.45);
+    background: #20ba5a;
+}
+
+@media(max-width: 950px) {
+    .location-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 3.5rem; }
+    .nav-links { display: none; }
+}
