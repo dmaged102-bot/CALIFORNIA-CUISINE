@@ -271,4 +271,77 @@ body {
         font-size: 0.5rem !important; 
         letter-spacing: 0.5px !important;
     }
+}/* ==========================================================================
+   1. شاشات التابلت والأجهزة المتوسطة (أصغر من 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    /* تصغير العناوين الضخمة نسبياً لتناسب التابلت */
+    h1 {
+        font-size: 3rem !important;
+    }
+    
+    /* تظبيط الهوامش الجانبية للمحتوى */
+    .container, section {
+        padding: 40px 20px !important;
+    }
+}
+
+/* ==========================================================================
+   2. شاشات الموبايل الكبيرة والعمودية (أصغر من 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* تحويل الـ Navbar من أفقي لعمودي لمنع تداخل اللينكات */
+    header, nav, .navbar {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+
+    /* إلغاء الـ Float أو الـ Grid العريض وتحويله لعمود واحد */
+    .row, .grid-layout, .menu-items {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* تصغير النص الكبير جداً في الـ Hero Section ليناسب عرض الموبايل */
+    h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    /* منع أي عنصر من إنه يخرج برة حدود الشاشة (حل مشكلة السكرول الجانبي البايخ) */
+    body, html {
+        overflow-x: hidden !important;
+    }
+
+    /* تظبيط الأزرار عشان تكون عريضة وسهلة الضغط باللمس */
+    .btn, button, .cta-button {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 10px auto !important;
+    }
+}
+
+/* ==========================================================================
+   3. شاشات الموبايل الصغيرة جداً (أصغر من 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    /* تصغير حجم الخطوط الفرعية والفقرات عشان الكلام ميتزحمش */
+    p, span, .sub-headline {
+        font-size: 0.95rem !important;
+    }
+
+    /* تظبيط حجم اللوجو على الشاشات الصغيرة جداً */
+    .logo, header img {
+        max-width: 140px !important;
+    }
 }
