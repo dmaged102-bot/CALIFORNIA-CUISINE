@@ -21,7 +21,7 @@ body {
     overflow-x: hidden;
 }
 
-/* مؤشر التحميل الذكي العلوي فائق الأناقة عند ثقل الشبكة */
+
 .network-loader {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 3px;
@@ -40,7 +40,7 @@ body {
     100% { filter: brightness(1); background-color: transparent; }
 }
 
-/* تعديل اللوجو الـ 3D: عايم وطاير بهدوء وسلاسة تامة بدون دوران كامل مزعج وبطريقة تفتح العين */
+
 .space-3d-bg {
     position: fixed;
     inset: 0;
@@ -78,7 +78,7 @@ body {
     transform: translateZ(60px);
 }
 
-/* أنميشن الطيران والعمق الفخم والتأرجح الهادئ جداً */
+
 @keyframes luxuryFloatCinematic {
     0% {
         transform: translateY(-20px) rotateX(4deg) rotateY(-4deg) translateZ(0px);
@@ -88,7 +88,7 @@ body {
     }
 }
 
-/* شاشة التحميل الكلية للموقع */
+
 #loader {
     position: fixed; inset: 0; background: #000; z-index: 9999;
     display: flex; justify-content: center; align-items: center; text-align: center;
@@ -100,7 +100,6 @@ body {
 .progress { width: 100%; height: 100%; background: var(--gold); animation: load 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
 @keyframes load { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
 
-/* الهيدر بار الزجاجي */
 .navbar {
     position: fixed; top: 0; left: 0; width: 100%; padding: 22px 6%;
     display: flex; justify-content: space-between; align-items: center; z-index: 100;
@@ -169,14 +168,12 @@ body {
     100% { box-shadow: 0 0 0 0 rgba(191, 149, 63, 0); }
 }
 
-/* === الـ Footer الفخم جداً المخصص لك بالكامل باللغة الإنجليزية وبطريقة تفتح العين === */
-/* === الـ Footer الفخم جداً النحيف للغاية والميكروسكوبي للموبايل === */
 .luxury-footer {
     background: rgba(5, 5, 6, 0.9) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
     border-top: 1px solid var(--border) !important;
-    padding: 10px 6% !important; /* تقليص الحشو الإجمالي */
+    padding: 10px 6% !important; 
     text-align: center !important;
 }
 
@@ -212,7 +209,7 @@ body {
     font-weight: 600 !important;
     font-size: 0.55rem !important;
     letter-spacing: 0.5px !important;
-    padding: 3px 8px !important; /* حجم صغير جداً */
+    padding: 3px 8px !important; 
     border-radius: 50px !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -221,14 +218,13 @@ body {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* === الحل الجذري والنهائي لشاشات الموبايل (أقل من 768px) === */
-/* === الـ Footer الجديد: سطر واحد ميكروسكوبي فخم === */
+
 .luxury-footer {
     background: rgba(5, 5, 6, 0.9) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
     border-top: 1px solid var(--border) !important;
-    padding: 8px 4% !important; /* حشو صغير جداً لجعل الشريط نحيفاً للغاية */
+    padding: 8px 4% !important;
     text-align: center !important;
 }
 
@@ -241,26 +237,26 @@ body {
 }
 
 .dev-credits {
-    font-size: 0.55rem !important; /* حجم خط صغير جداً وناعم ومريح للعين */
+    font-size: 0.55rem !important; 
     color: rgba(255, 255, 255, 0.4) !important;
     letter-spacing: 1px !important;
     text-transform: uppercase !important;
     margin: 0 !important;
 }
 
-/* تحويل اسمك إلى رابط تفاعلي فخم للواتساب */
+
 .designer-link {
     font-weight: 700 !important;
     background: var(--gold) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    text-decoration: none !important; /* إخفاء الخط السفلي الافتراضي للروابط */
+    text-decoration: none !important; 
     display: inline-block !important;
     transition: opacity 0.3s ease !important;
     cursor: pointer !important;
 }
 
-/* تأثير خفيف جداً عند تمرير الماوس أو الضغط */
+
 .designer-link:hover {
     opacity: 0.8 !important;
 }
@@ -268,11 +264,11 @@ body {
 /* === توافق تام مع الموبايل === */
 @media (max-width: 768px) {
     .luxury-footer {
-        padding: 6px 4% !important; /* شريط شبه غير مرئي أسفل الشاشة على الهاتف */
+        padding: 6px 4% !important; 
     }
     
     .dev-credits {
-        font-size: 0.5rem !important; /* حجم متناهي الصغر يناسب الهواتف تماماً */
+        font-size: 0.5rem !important; 
         letter-spacing: 0.5px !important;
     }
 }
